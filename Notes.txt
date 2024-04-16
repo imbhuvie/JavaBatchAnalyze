@@ -1,0 +1,257 @@
+-----------------------------------------------------------
+DATE 12-04-2024:
+-----------------------------------------------------------
+Operators:
+0. Unary Operator:
+============================================================
+1. Binary Operator: it require 2 operand to perform an expression
+//there are three types of binary operator
+//1.1 Arithematic:
+	[+  -  *  /  %]
+//1.2 Relational Operator :
+	It is use to contruct a consition and it return either true or false [> >= < <= == != ]
+//1.3 Assignment operator:
+	Operator	Expression	Value
+------------------------------------------------------
+	=		a=10		10
+	+=		a+=20		30
+	-=		a-=5		25
+	*=		a+=10		250
+	/=		a/=20		12
+	%=		a%=10		2
+------------------------------------------------------
+================================================================
+2. Ternary Operator(Conditional Operator):(?:):
+Syntex: (condition?statementForTrue:statementForFalse);
+=================================================================
+3. Logical Operator:
+3.1.AND operator (&&):when both condition are true then result is true.
+3.2.OR operator (||): when any one consition is true the result is true.
+3.3. NOT operator (!) : inverse the result.
+===================================================================
+4. Bitwise Operator:
+bitwise operator allow us to perform an operation on bits(0,1).
+<< left shift
+<<< left shift and fill by 0
+
+>> right shift
+>>> right shift and fill by 0
+| bitwise OR
+& bitwise AND
+
+==================================================
+5. instanceOf Operator
+	it is used to check that an object is member of class or not.
+	Syntex : object instanceOf className
+====================================================
+	TYPECASTING anf PARSING
+
+	Typecasting is used to convert a value from ine datatype to another datatype
+	primitive to primitive and non-primitive to non-primitive both are typecasting
+	primitive to non-primitive and non-primitive to primitive both are Parsing
+
+	Difference between typecasting and Parsing
+	types casting allow conversion from primitive to primitive or on-primitive to non-primitive
+	while Parsing to converse form String(non-primitive) to primitive data type.
+
+	Typecasting are two types
+	1.implicit Typecasting:
+		When programmer require to convert lower datatype value(in context of size of datatype) to Higher data type,
+		this conversion done by compiler and called implicit typecasting
+		byte a=10;
+		short b=a;//byte to short
+		int c=b;//short to int 
+	2.explicit Typecasting:
+		when a programmer need to convert higher size data type into lower size data type,
+		then there is possibility of data loss and it required for following syntex:
+			lowerSizeVariable=(lowerDataType)higherSizeVariable;
+
+			int a=100;
+			byte b;
+			short c;
+			float d;
+			conversion
+			b=(byte)a;
+			c=(short)a;
+
+		Every decimal value is considered as double 
+		A float value is always end by f
+		d=20.5;//error
+		double e=20.5; //right
+		d=20.5f;
+		d=(float)20.5;
+
+
+============================================================
+Arithematic calculation and result
+
+value1		value2		result
+byte		byte		int
+byte		short		int
+short 		int 		int
+int 		int 		int
+int 		float		float
+int 		double		double
+
+byte a,b,c;
+a=10;
+b=20;
+c=a+b;//error
+c=(byte)(a+b);//right
+
+=====================================================================
+DATE 13-04-2024 Saturday:
+===============================================================
+Control Statements:
+	control Statements are use to control flow of program 
+	There r 3 types of control statements 
+		1. conditional statements
+		2. selective statements
+		3. iterative statement(looping)
+
+		=> 	supportive control statement
+				break
+				continue
+				goto (not supported by java) : reserved keyword but not used or supported
+				in java the task of goto can be implimented with the help of continue 
+============================================================================
+CONDITIONAL Statements:
+	such type of statement execute a part of program accordingly condition.
+	using if-else we can impliment conditional statement in java.
+	if there only one condition 
+
+	if(conditoin){
+		statement1
+		statement2
+		.
+		.
+	}
+
+	if there were 2 conditons:
+
+	if(conditoin){
+		statement1
+		statement2
+		.
+		.
+	}
+	else{
+		statement1
+		statement2
+		.
+		.
+	
+	}
+
+		if there more than 2 conditons:
+
+	if(conditoin1){
+		statement1
+		statement2
+		.
+		.
+	}
+	else if(conditon2){
+		statement1
+		statement2
+		.
+		.
+	
+	}
+	else if(conditon3){
+		statement1
+		statement2
+		.
+		.
+	
+	}
+	.
+	.
+	.
+	.
+	else{
+		statement1
+		statement2
+		.
+		.
+	
+	}
+----------------------------------------------------------
+why after if, else is skipped
+break is auto inbuilt in if so after if else does not execute.
+---------------------------------------------------------
+	NESTED if
+	if an if control contains another if control staatement, then it is called nested if
+	if(conditon){
+		if(condition){
+		statement
+		}
+		else{
+			statement
+		}
+	}
+	else{
+		statement
+	}
+
+==========================================================================
+java.lang.Math class:
+Math.PI = 22/7
+Math.pow(4,2) = 16
+Math.sqrt(16) = 4 
+Logicalsin
+cos
+tan
+Math.abs(-20)=20
+ciel()
+floor()
+
+==============================================================================
+Selective Statements(switch):
+		this type of statement execute a part of program according switch case.
+		for Ex: Customer case calling system and choices in ATM banking
+		Syntax:
+		switch(choice)
+		{
+			case 1:
+			{
+			statement1
+			statement2
+			.
+			.
+			break;
+			}
+			case 2:
+			{
+			statement1
+			statement2
+			.
+			.
+			break;
+			}
+			.
+			.
+			.
+			default:
+			{
+			statement1
+			statement2
+			.
+			.
+			
+			}
+		}
+	Note:
+		if no one case is matched then default block will executed
+		break is required in each case otherwise after matching case all the case including default executed
+	WAP to input 2 number and find one of the following operation according users choice
+		1.Addition
+		2.Subtraction
+		3.Multiplication
+		4.Division
+	Write the progrsm to find one the following operation according to user choice
+		1.Area of square
+		2.Area of triangle
+		3.Area of circle
+		4.Area of rectangle
+	check if a char is vowel or consonent using switch case.
