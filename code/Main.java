@@ -259,6 +259,175 @@ public class Main {
 
     }
 
+    public static void dayOfWeek() {
+        System.out.print("Enter the day :");
+        int day = sc.nextInt();
+        switch (day) {
+            case 1: {
+                System.out.println("Sunday");
+                break;
+            }
+            case 2: {
+                System.out.println("Monday");
+                break;
+            }
+            case 3: {
+                System.out.println("Tuesday");
+                break;
+            }
+            case 4: {
+                System.out.println("Wednesday");
+                break;
+            }
+            case 5: {
+                System.out.println("Thursday");
+                break;
+            }
+            case 6: {
+                System.out.println("Friday");
+                break;
+            }
+            case 7: {
+                System.out.println("Sutarday");
+                break;
+            }
+            default: {
+                System.out.println("Wrong Input, Try Again");
+            }
+
+        }
+    }
+
+    public static void bonusSalary() {
+        System.out.print("Enter Employee code :");
+        int empCode = sc.nextInt();
+        System.out.print("Enter the Salary of Employee :");
+        double salary = sc.nextDouble();
+        switch (empCode) {
+            case 100: {
+                double bonus = (salary * 5) / 100;
+                System.out.println("Bonus : " + bonus);
+                break;
+            }
+            case 200: {
+                double bonus = (salary * 1) / 100;
+                System.out.println("Bonus : " + bonus);
+                break;
+            }
+            case 300: {
+                double bonus = (salary * 2) / 100;
+                System.out.println("Bonus : " + bonus);
+                break;
+            }
+            case 400: {
+                double bonus = (salary * 25) / 100;
+                System.out.println("Bonus : " + bonus);
+                break;
+            }
+            default: {
+                System.out.println("This Employee Code is not specified for bonus.");
+            }
+        }
+    }
+
+    public static void tableUsingWhile() {
+        int n, i = 1, t;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a Number :");
+        n = sc.nextInt();
+        System.out.println("Table of " + n + " : ");
+        while (i <= 10) {
+            t = n * i;
+            System.out.println(n + " * " + i + " = " + t);
+            i++;
+        }
+    }
+
+    public static void tableUsingFor() {
+        System.out.println("Enter a number :");
+        int n = sc.nextInt();
+        int t;
+        System.out.println("Table of " + n + " : ");
+        for (int i = 1; i <= 10; i++) {
+            t = n * i;
+            System.out.println(n + " * " + i + " = " + t);
+        }
+    }
+
+    public static void tableUsingDoWhile() {
+        int n, i = 1, t;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a Number :");
+        n = sc.nextInt();
+        System.out.println("Table of " + n + " : ");
+        do {
+            t = n * i;
+            System.out.println(n + " * " + i + " = " + t);
+            i++;
+        } while (i <= 10);
+    }
+
+    public static void sumOfDigit() {
+        System.out.print("Enter a numbre :");
+        int n = sc.nextInt();
+        int sum = 0;
+        int rem;
+        while (n != 0) {
+            rem = n % 10;
+            sum = sum + rem;
+            n /= 10;
+        }
+        System.out.println("sum of digits : " + sum);
+
+    }
+
+    public static void reverseNumber() {
+        System.out.print("Enter number :");
+        int n = sc.nextInt();
+        int rem;
+        System.out.print("Reverse Number :");
+        while (n != 0) {
+            rem = n % 10;
+            System.out.print(rem);
+            n /= 10;
+        }
+    }
+
+    public static void checkPrime() {
+
+        boolean b = false;
+        System.out.print("Enter Number :");
+        int n = sc.nextInt();
+        for (int i = 2; i <= n / 2; i++) {
+            if (n % i == 0) {
+                b = true;
+                break;
+            }
+        }
+        if (b)
+            System.out.println(n + " Not Prime");
+        else
+            System.out.println(n + " PRIME NUMBER");
+    }
+
+    public static void sumOfFactor() {
+        System.out.print("Enter Number :");
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int sum = 0;
+        System.out.print("Factors : ");
+        for (int i = 2; i <= n / 2; i++) {
+            if (n % i == 0) {
+                System.out.print(i + " ");
+                sum += i;
+            }
+        }
+        if (sum == 0)
+            System.out.println("no Factor");
+        else
+            System.out.print("\nsum of Factors :" + sum);
+    }
+
     public static void main(String args[]) throws IOException {
         // Take input
         // takeInput();
@@ -292,11 +461,22 @@ public class Main {
         // check if a char is vowel or consonent using switch case.
         // checkVowelUsingSwitch();
         // WAP program to input Day of week and print name of day using switch case
-        dayOfWeek();
-    }
-
-    public static void dayOfWeek() {
-
+        // dayOfWeek();
+        // find bonus for the employees while empcode and bonus in % is given below
+        // using switch.
+        // empCode, bonus in %
+        // 100, 5
+        // 200, 1
+        // 300, 2
+        // 400, 25
+        // bonusSalary();
+        // tableUsingWhile();
+        // tableUsingDoWhile();
+        // tableUsingFor();
+        // sumOfDigit();
+        // reverseNumber();
+        // checkPrime();
+        // sumOfFactor();
     }
 
 }
