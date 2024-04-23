@@ -428,6 +428,61 @@ public class Main {
             System.out.print("\nsum of Factors :" + sum);
     }
 
+    public static void sumUsingForeach() {
+        int arr[] = { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 };
+        int sum = 0;
+        for (int value : arr) {
+            sum += value;
+        }
+        System.out.println("sum : " + sum);
+
+    }
+
+    public static void evenOddArraySum() {
+        int[] arr = { 1, -2, 3, -4, -5, 6, 7, -8, 9, -11, 12, -13, 14, -15, -16 };
+        int sumPositiveEven = 0;
+        int sumNegativeEven = 0;
+        int sumPositiveOdd = 0;
+        int sumNegativeOdd = 0;
+        for (int n : arr) {
+            if (n > 0) {
+                if (n % 2 == 0) {
+                    sumPositiveEven += n;
+                } else {
+                    sumPositiveOdd += n;
+                }
+            } else {
+                if (n % 2 == 0) {
+                    sumNegativeEven += n;
+                } else {
+                    sumNegativeOdd += n;
+                }
+            }
+        }
+        System.out.println("sumPositiveEven :" + sumPositiveEven + " sumNegativeEven :" + sumNegativeEven
+                + " sumPositiveOdd :" + sumPositiveOdd + " sumNegativeOdd :" + sumNegativeOdd);
+    }
+
+    public static void findInArray() {
+        int arr[] = new int[10];
+        System.out.print("enter 10 elements: ");
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = sc.nextInt();
+        }
+        System.out.println("Entered elements to search :");
+        int number = sc.nextInt();
+        boolean flag = true;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == number) {
+                System.out.println("Index is :" + i);
+                flag = false;
+            }
+        }
+        if (flag) {
+            System.out.println("element not found ");
+        }
+    }
+
     public static void main(String args[]) throws IOException {
         // Take input
         // takeInput();
@@ -477,6 +532,22 @@ public class Main {
         // reverseNumber();
         // checkPrime();
         // sumOfFactor();
+        // WAP to initialize an array of 10 elements and print all elements with sum of
+        // all elements.
+        // sumUsingForeach();
+        // WAP to initialize an array of 15 elements that contain +ve and -ve numbers
+        // and print all elements with
+        // 1. sum of +ve even numbers
+        // 2. sum of +ve odd number
+        // 3. sum of -ve even numbers
+        // 4. sum of -ve odd number
+        // evenOddArraySum();
+
+        // wap to input an array of 10 elements to find particular elements:
+        // findInArray();
+        // ====================================================
+       
+
     }
 
 }

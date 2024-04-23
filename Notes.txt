@@ -255,3 +255,34 @@ Selective Statements(switch):
 		3.Area of circle
 		4.Area of rectangle
 	check if a char is vowel or consonent using switch case.
+	==================================================================
+	foreach Loop: for(){}
+		it is used in array to access all the elements of array without using index.
+		it access start to end all elements
+		Syntax :-
+			for(variable declaration : array name){
+				statement;
+				.
+				.
+			}
+
+===============================================
+*
+*	*
+*	*	*
+*	*	*	*
+*	*	*	*	*
+=================================================
+OOPS:
+	elements of OOPs:
+	1. Class And object
+	2. Inheritance
+	3. Abstraction
+	4. polymorphism
+	5. Encapsulation
+
+=======================================================
+1. Class and objetc:
+		class is blueprint or container of instance variables(attributes) and their behavior(methods).
+        // Object creation of class refers memory allocation of all instance variable.
+create a class circle and compute area ,circumference.
