@@ -286,3 +286,38 @@ OOPS:
 		class is blueprint or container of instance variables(attributes) and their behavior(methods).
         // Object creation of class refers memory allocation of all instance variable.
 create a class circle and compute area ,circumference.
+
+===============================================================
+paramiterised constructor:
+ a constructor take paramiter value, called paramitersed constructor or argument constructor on the basis of argument value,
+ we can classified paramiterised constructor into 2 types:
+    1. paramiterised constructor using callByValue
+    2. paramiterised constructor using callByreference
+
+1. paramiterised constructor using callByValue :
+    A constructor that take primitive type values such as int,float,double,long,...etc. such as argument,
+    it is called paramiterised constructor using callByValue.   
+    as we know that implicit default constructor automatically created with every class but when a programmer creats a constructor
+    then implicit default constructor it replaced by user created constructor.
+
+2. paramiterised constructor using callByreference
+    A constructor that takes object as argument , it is called paramiterised constructor using callByreference. 
+    A paramiterised constructor using callByreference must be written with atleast one default or paramiterised constructorusing
+    callByValue .
+
+--------------------------------------------------------------------------------------------------------
+WAP to create a class Dimension, if area=2(wh+hd+dw), then compute area of above shape using
+1. default constructor
+2. paramiterised constructor using callByValue
+3. paramiterised constructor using callByreference
+
+-----------------------------------------------------------------------------------------------
+|  NOTE: If a class has more then one constructor then it is called constructor overloading.  |
+-----------------------------------------------------------------------------------------------
+
+WAP to create a class Factorial then compute Factorial of a number using:
+1. default constructor
+2. paramiterised constructor using callByValue
+3. paramiterised constructor using callByreference
+
+===============================================================================
