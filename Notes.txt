@@ -321,3 +321,44 @@ WAP to create a class Factorial then compute Factorial of a number using:
 3. paramiterised constructor using callByreference
 
 ===============================================================================
+Inheritance:
+    Reusability of code is called Inheritance.
+    Inheritance we can reuse properties of one class by another class .
+    In Inheritance all the use classes can we classified into 2 types
+        1. BaseClass/superClass/parentClass
+        2. DerivedClass/childClass/subClass
+
+Types of Inheritance:
+   There r 5 types of Inheritance
+   1. Single Inheritance
+   2. Hirarchial Inheritance
+   3. Multiple Inheritance (Does not support)
+   4. MultiLevel Inheritance
+   5. Hybrid Inheritance
+
+1. Single Inheritance :
+    THis type of Inheritance contains single BaseClass and single DerivedClass
+    NOTE    1: extends keyword is used to inherit propertise of one class to another class 
+               private variable and method never inherit.
+               Inheritance is Bottum to Top programming approach.
+
+2. Hirarchial Inheritance:
+    In this we can inherit the properties of one class by 2 or more classes.
+
+3. Multiple Inheritance (Does not support):
+    In this we can inherit properties of 2 or more classs by a single class.
+    Note : Java does not support multiple Inheritance due to constructor calling in Inheritance,
+           but multiple Inheritance in java can be implimented with the help of Interface.
+
+4. MultiLevel Inheritance:
+    An Inheritance that have minimum 2 level called MultiLevel Inheritance
+
+5. Hybrid Inheritance:
+    The combination of multiple and MultiLevel Inheritance called Hybrid Inheritance
+
+
+WAP to create class that series that have 3 attribute a,d,n it contains method input,
+now create 2 subclasses AP Series and GP series, to print respective series;
+
+WAP to create a class Shape that contains 2 child and input for input and now create 2 subclasses
+rectangle and tringle to compute respective areas.
