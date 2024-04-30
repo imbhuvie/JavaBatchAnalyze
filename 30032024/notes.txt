@@ -1,0 +1,12 @@
+super KEYWORD:
+    Super keyword refers the object of super class
+    super keyword is always implimented in inheritance and using super keyword,
+    we can access the propeties of super class. 
+
+Property 1 in context of variable:
+    it allow that we can have local and instance variable with same name,
+    then using super keyword we can access super class variable in base class
+
+Property 2 in context of Constructor:
+    using super keyword we can call paramiterized constructor of the superclass,
+    for this the statemnt must be written inside constructor as first statement

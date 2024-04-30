@@ -362,3 +362,6 @@ now create 2 subclasses AP Series and GP series, to print respective series;
 
 WAP to create a class Shape that contains 2 child and input for input and now create 2 subclasses
 rectangle and tringle to compute respective areas.
+	
+======================================
+		 
