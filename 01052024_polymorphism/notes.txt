@@ -1,0 +1,72 @@
+Polymorphism:
+    poly(many) + Morphism(forms)
+    one name and its multiple form are called Polymorphism
+    in Polymorphism using single component we can perform more then one operation
+    all the concept of Polymorphism are implimented in the context of method
+    Polymorphism also called binding in OOPs
+  There are 2 types of Polymorphism
+    1.CompileTimePolymorphism(Static)(check by compile)(early binding)
+    2.RunTimePolymorphism(Dynamic)(Checked by JVM)(Late Binding)
+
+1.CompileTimePolymorphism(Static)(check by compile)()
+    In this all the used method should be bind in the time of compilation that why it is also called early Binding
+    There are 3 types of compile time Polymorphism :-
+    1.Method Overloading
+    2.Constructor Overloading
+    3.Operator Overloading
+------------------------------------------------------------------------------------------------
+1.Method Overloading: 
+        Method Overloading allow to having two or more methods with same name
+        and different number of argument and datatype of argument and sequence of argument.
+        In this all the used method should be bind at the time of compilation.
+
+Example of MethodOverloading:
+
+public class Test{
+    void sum(int x,int y){
+        
+    }
+    void sum(int x,int y,int z){//number of argument
+
+    }
+    void sum(int x,float y){//datatype of argument
+
+    }
+    void sum(float x, int y){//sequence of argument
+
+    }
+}
+
+---------------------------------------
+2.Constructor Overloading : if a class contain more than one Constructor that is know as constructor overlaoding
+
+    WAP to table of any number by appropriate use of constructor overloading
+    WAP to print AP series if value are a,d,n are initialised using constructor(implimente constructor overloading)
+----------------------------------------------------------------------------------------------------------
+3.OperatorOverloading : 
+    OperatorOverloading means we can assign new definition for an existing Operator
+    Java Does not support OperatorOverloading programming due to security
+    but there are 2 operator which are already OperatorOverloaded
+        1. + is used for addition and concatenation
+        2. - is used for subtraction and unary minus operation (-12,-34 etc)
+
+Example of OperatorOverloading:
+
+public class OperatorOverloading{
+    public static void main(String args[]){
+        int a=10,b=20;
+        String c="10",d="20";
+        System.out.println(a+b);//Addition
+        System.out.println(c+d);//concatenation
+        System.out.println(b-a);//binary minus
+        System.out.println(-b);//unary minus
+    }
+}
+--------------------------------------------------------------------------------------
+WAP to compute area of following shape using method overloading
+1.AreaOf square
+2.AreaOf rectangle
+3.Areaof trinagle
+4.Area of circle
+----------------------------------------------------------------------------------
+find largest between 2 and 3 using method overloading.

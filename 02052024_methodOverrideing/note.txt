@@ -1,0 +1,56 @@
+MethodOverriding :
+        Method Overriding allow to having a method that have same prototype in base and derived class
+        that means, A base class method is redefined by derived class. 
+        Here the definition of base class method is hidden by derived class method definition.
+        In MethodOverriding all the used method should be bind at the time of execution of program
+        Its reason thats why it is called runtime Polymorphism or late binding or Dynamic 
+        
+WAP to create a Class Series that contains three attributes a,d,n and
+two method getData and printSeries
+Now create two subClasses APSeries and GPSeries to print respective series by overriding printSeries() method
+
+Property of super Keyword in context of method:
+        using super keyword we can get the actual definition of base class method which is overridden by derrived class
+=================================================================================================================================
+Difference between MethodOverloading and MethodOverriding:
+
+1.  MethodOverloading is applicable in same class
+    MethodOverriding is applicable in inheritance
+
+2.  In MethodOverloading, two or more method has same name but different argument.
+    In MethodOverriding, two or more method same name and same argument.
+
+3   In MethodOverloading, used method should be bind at the time of compilation
+    In MethodOverriding, used method should be bind at the time of execution
+
+=======================================================================================
+Modifiers:
+    Modifiers contains set of rules that can modified the propertis of variable,method,class
+    There are 8 modifiers in java and four access-modifiers.
+    Modifiers:--
+        abstract
+        static
+        final
+        synchronized
+        transient
+        volatile
+        native
+        strictfp
+    Access-Modifiers:--
+        private
+        default(No Modifiers)
+        protected
+        public
+
+    Note: Modifiers are also keyword.
+```````````````````````````````````````````````````````````````
+Abstract Modifiers:
+    1.Abstract method:(Declarative method)
+        An abstract method cannot have definition body inside base class, it can have only declaration inside base class.
+        Here Abstract method always overridden by derived class.
+        At the time of declaration of an abstract method we must use abstract keyword but at the time of overrid an abstract mehtod,
+        we should not use abstract keyword.
+    2.Abstract class:
+        An abstract class is an incomplete class that can not instantiated, that is we cannot create object of abstract class.So abstract always inherited by other class.
+        A class that extends abstract class, it must override all abstract method of abstract class otherwie it should be compile time Exception
+WAP to demontration of abstract method and class

@@ -1,0 +1,87 @@
+Servlet:
+    1. HttpServlet
+    2. GenericServlet
+----------------------------------------------------------------------------------------------------
+Session Handling :
+    Session is just like a global variable that contains a value and this value can be access
+    on any web page inside current application.
+    Data which is stored using Session, it should be store in server memory.
+    Session Handling only applicable on HttpServlet not for GenericServlet.
+    There is a predefine class name aas javax.Servlet.http.HttpServlet.
+----------------------------------------------------------------------------------------------------
+ Object Creation for HttpSession :
+    HttpSession session =request.getSession();
+----------------------------------------------------------------------------------------------------
+ Adding Data into Session :
+    There are two method to add data in session:
+        1. session.putValue("variable_name",<value>);//dpr
+        2. session.setAttribute("variable_naem",<variable>);
+ Example:
+    session.putValue("user","Analyze");
+    session.putValue("pswd","Lucknow");
+
+                OR
+    session.setAttribute("user","Analyze");
+    session.setAttribute("pswd","Lucknow");
+----------------------------------------------------------------------------------------------------
+Reading Data from session
+String user=session.getValue("user").toString();//Data will be in object so change to String
+String pswd=session.getValue("pswd").toString();
+
+                OR
+String user=session.getAttribute("user").toString();//Data will be in object so change to string
+String pswd=session.getAttribute("pswd").toString();
+
+----------------------------------------------------------------------------------------------------
+Updating data of session:
+session.putValue("user",Analyze Infotech");
+session.putValue("pswd","lko");
+
+            OR
+
+session.setAttribute("user",Analyze Infotech");
+session.setAttribute("pswd","lko");
+
+----------------------------------------------------------------------------------------------------
+Delete data from session
+
+session.putValue("user",null);
+session.putValue("pswd",null);
+
+            OR
+session.setAttribute("user",null);
+session.setAttribute("pswd",null);
+----------------------------------------------------------------------------------------------------
+To redirect another page:
+    respond.sendRedirect("homepage?msg=password Updated successfully");
+----------------------------------------------------------------------------------------------------
+Cookie:
+    cookie is a text information that stores on client side and this information can access anywhere in web application.
+    There are 2 types of cookies :
+    1. In Memory cookie: such type should store in browser memory and it is automatically deleted when browser is closed.
+2. Persistent Cookie: such type Cookie should store for specific time, after this duration it is automatically deleted after this duration.
+Note : Cookie only applicable for HttpServlet.
+``````````````````````````````````````````````
+creating Object of cookie:
+        Cookie ck1=new Cookie("user","analyze");
+        Cookie ck2=new Cookie("pswd","Lucknow");
+How to make Persistent cookie:
+Syntex: ck2.setMaxAge(<inSecond>);
+        ck2.setMaxAge(24*30*60*60);//for 30 days
+Add Cookie on client side:
+        response.addCookie(ck1);
+        response.addCookie(ck2);
+    
+How to get data from cookie;
+    Cookie ck[]=request.getCookies();
+    for(int i=0;i<ck.length;i++){
+        out.println("Cookie Name :"+ck[i].getName);
+        out.println("Cookie Name :"+ck[i].getValue);
+    }
+Updating value of cookie:
+    ck1=new Cookie("user","Analyze Infotech");
+    ck2=new Cookie("pswd","Analyze Lucknow");
+
+Note:Using program we can not delete Cookie.
+````````````````````````````````````````````
+----------------------------------------------------------------------------------------------------

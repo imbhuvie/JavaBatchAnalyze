@@ -10,3 +10,7 @@ Property 1 in context of variable:
 Property 2 in context of Constructor:
     using super keyword we can call paramiterized constructor of the superclass,
     for this the statemnt must be written inside constructor as first statement
+
+Property 3 in context of method:
+    using super keyword we can get the actual definition of base class method,
+    which is overrided by derived class.
