@@ -85,3 +85,63 @@ Updating value of cookie:
 Note:Using program we can not delete Cookie.
 ````````````````````````````````````````````
 ----------------------------------------------------------------------------------------------------
+03052024
+
+JSP (Java Server Page):
+Note: JSP page always exist to WebPage.
+    jsp is a server side scripting language
+    every scripting language bases on its Tags, So jsp is also based on tags.
+    A jsp file can have HTML,CSS,JavaScript,Java code.
+    A jsp file has .jsp extension
+    every jsp page converted in servet by jsp container.
+    jspFile=>ServletFile.java=>ByteCode.class=>converion to machine code and execute
+
+Advantage:
+    1.A jsp file does not need structure of class an object.It works like scripting language(Server Side)
+    2.A jsp file can have HTML code normally, it does not need of out.println().
+    3.Execution of jsp page is faster then Servlet
+    4.A jsp file also support implicit object for use full classes and interface.
+    implicit object:
+        Page page
+        PrintWriter out
+        ServletConfig config
+        HttpServletRequest request
+        HttpServletResponse response
+        HttpSession session
+        Cookie cookie
+``````````````````````````````````````````````````````````````````````````````````
+JSP Tags:
+    There are five types of jsp tags:
+        1.Directive tag: Directive tag used to import specific Class,Package or it is also used to inherit class.
+            <%@page import="java.util.*"%>
+            <%@page import="DB.*"%>
+
+            <%@page include="header.jsp"%>
+            <%@page include="index.html"%>
+            <%@page include="header.jsp"%>
+        2.Declarative Tag: It is used to declare variable and function which can access any where in webpage
+            <%!
+                String cname="Analyze";
+                String city="Lucknow";
+                int sum=0
+                void sum(int n){
+                    for(int i=0;i<=n;i++){
+                        sum=sum+i;
+                    }
+                }
+            %>
+        3.Scriptlet Tag: it most used tag in jsp and it can have any valid java code or statement.
+            <%
+                int a=10;
+                int b=20;
+                int c=a+b;
+                System.out.println("Addition :"+c);
+            %>
+        4.Expression Tag: it used to execute single java statement and it also print its output.
+            <%= cname %>
+                OR
+            <% out.println(cname); %>
+        5.Comment Tag: 
+        <%--  --%>
+
+    UTF-8: universal true font

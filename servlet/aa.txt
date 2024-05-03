@@ -1,0 +1,13 @@
+    private static final String url="jdbc:mysql://localhost/bank";
+    private static final String user="root";
+    private static final String password="password";
+<Load Connector File into project>
+Class.forName("com.mysql.cj.jdbc.Driver");
+Connection connection = DriverManager.getConnection(url,user,password);
+String Query="update account set balance=balance-? where account_number=?";
+PreparedStatement preparedStatement=connection.prepareStatement(Query);
+debitpreparedStatement.setInt(1,value1);
+debitpreparedStatement.setDouble(2,value2);
+preparedStatement.executeUpdate();
+ResultSet resultSet=preparedStatement.executeQuery();
+int rowAffected=preparedStatement.executeUpdate();
