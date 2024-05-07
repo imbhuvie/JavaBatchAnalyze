@@ -11,3 +11,30 @@ debitpreparedStatement.setDouble(2,value2);
 preparedStatement.executeUpdate();
 ResultSet resultSet=preparedStatement.executeQuery();
 int rowAffected=preparedStatement.executeUpdate();
+response.sendRedirect("PageName?variable1=Value1&Variable2=Value2")
+    to send msg using url when redirecting page
+
+    1.Directive:
+        <%@page import="java.util.*"%>
+            <%@page import="DB.*"%>
+    2.Declarative 
+            <%!
+                String cname="Analyze";
+                void sum(int n){
+
+                }
+            %>
+    3.Scriptlet Tag: 
+            <%
+                int a=10;
+                int b=20;
+                int c=a+b;
+                System.out.println("Addition :"+c);
+            %>
+    4.Expression Tag: i
+            <%= cname %>
+                OR
+            <% out.println(cname); %>
+    
+    5.Comment Tag: 
+        <%--  --%>

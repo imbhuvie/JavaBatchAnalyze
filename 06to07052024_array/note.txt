@@ -1,0 +1,39 @@
+Array:
+    Array is a collection of similar types.
+    For example if we want roll no of 100 student then simply require 100 integer type varibale but using Array we can create an array of 100 elements
+    length: it is a literal of array which return total number of elements(count).
+    for each loop: It allow to access all the elements of array without using the index value.
+
+    Declartion:
+        There are 3 syntax to Declare an array:
+        1.
+            <dataType> <arrayName>[];   //example:  int a[];    Initialization : int a[]={1,2,3,4,5,5,6,6,};
+        2.
+            <dataType>[] <arrayName>;   //example:  int[] a;    OR int[] a,b,c; 
+            NOTE: Using syntax 2nd we can Declare multiple array at a time.
+        3. 
+            fixed size array declation:
+            int ar[]=new int[10];
+
+MultiDimentional Array :
+    Declaratiom syntax 
+    1.
+        <dataType> <arrayName>[][];
+        int arr[][];    OR int[][] arr;
+    2.
+        <dataType> <arrayName>[][]=new <dataType>[<row>][<column>];
+        int m[][]=new int[5][4];
+                It allocate memory for 20 elements
+        m00 m01 m02 m03 m04
+        m10 m11 m12 m13 m14
+        m20 m21 m22 m23 m24
+        m30 m31 m32 m33 m34
+    Initialization of 2D array:
+        int m[][]={{2,3,4,5},{3,4,5,6},{4,5,6,7},{5,7,9,0}};
+
+
+WAP to input matrix 4*5 and print transpose of its.
+WAP to input matrix 4*4 and find 
+    1. sum of its left diagnal 
+    2. sum of its right diagnal
+WAP to input 2 matrix 3*3 order and find its multiplication.
