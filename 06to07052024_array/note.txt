@@ -37,3 +37,10 @@ WAP to input matrix 4*4 and find
     1. sum of its left diagnal 
     2. sum of its right diagnal
 WAP to input 2 matrix 3*3 order and find its multiplication.
+
+Zagged array:
+    int [][]a=new int[4][];
+    int a[0]=new int[5];
+    int a[1]=new int[4];
+    int a[2]=new int[1];
+    int a[3]=new int[8];

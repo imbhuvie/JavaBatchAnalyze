@@ -1,0 +1,119 @@
+STRING HANDLING:
+`````````````````
+        String:
+        ````````
+            A sequence of character inclosed within double qouets,it is called String.
+            Example : "abc!@#123"
+
+    String Handling allow to perform string manipulation operation such as : 
+        UPDATE, DELETE existing content
+        INSERTING new content
+        SEARCHING content  
+    There are three pre-define classes used for string handling.
+    1.java.lang.String
+    2.java.lang.StringBuffer
+    3.java.lang.StringBuilder
+
+1.java.lang.String:
+```````````````````
+    string is immutable class(Non-changable), That means the object of String class cannot be changed.
+    if we are trying to change the value of string object then it creates new memory for String object.
+    Exmaple:
+        String s = "hello";
+        System.out.println(s.hashCode());   //address : 34587654
+        s = "java";
+        System.out.println(s.hashCode());   //address : 987645676
+        
+    Constructor of String Class
+    ```````````````````````````
+        as we know that at the time of object creation calling of atleast one constructor is mandetory
+            String()
+            String(String)
+            String(StringBuffer)
+            String(StringBuilder)
+            String(char[])
+            String(char[],int start_index)
+            String(byte[],int start_index)
+            String(byte[],int start_index,int number_of_char)
+            String(char[],int start_index,int number_of_char)
+        
+    String methods():
+    `````````````````
+        1. lenght() : it returns total number of stored character in string.
+        String s1="Java";
+        sout(s1.length())//4
+        2.toUpperCase() :returns content of String object in uppercase
+            sout(s1.toUpperCase())  //JAVA
+        3.toLowerCase() :returns content of String object in lowerCase
+            sout(s1.toLowerCase())  //java
+        4.charAt(int_index): return specified index.
+            sout(s1.charAt(3));     //a
+        5.indexOf(<char>) :return first index of occurance of the char
+            sout(s1.indexOf('a'))   //1
+        6.subString(int_from_index) :return substring from the given index to end.
+            sout(s1.subString(2))   //value
+        7.subString(start_index,end_index) :return substring start_index to end_index-1.
+                                          and total number of char end_index-start_index
+            sout(s1.subString(1,4)  //ava
+        8.equals() method and == operator;
+        equals() method :compares the content of two string object and,
+        9.== operator : compares reference of two string object,
+                      reference means content and method of object craetion should be same.
+            String s1 = "Java";
+            String s2 = "Java";
+            String s3=new String("Java");
+            String s4="JAVA";
+            System.out.println(s1==s2); //true
+            System.out.println(s1==s3); //false
+            System.out.println(s1==s4); //false
+            System.out.println(s1.equals(s2));  //true
+            System.out.println(s1.equals(s3));  //true
+            System.out.println(s1.equals(s4));  //false
+        10.equalsIgnoreCase(): it compare the content of two string object without case sensivity 
+
+        11.compareTo(): it compare the content of two string object and return integer value.
+            if(0):both are equal
+            if(+ve):first String is Greater
+            if(-ve):Second String is smaller in alphabatical order
+
+        12. toString(): convert object type value to String.
+
+        13. String.valueOf(byte);
+            String.valueOf(short);
+            String.valueOf(int);
+            String.valueOf(float);
+            String.valueOf(long);
+            String.valueOf(double);
+        These changes primitive datatypes into String 
+        ``````````````````````````````
+
+==============================================================
+StringBuffer:
+`````````````
+    StringBuffer is mutable class that means, once we store the data
+    it can be added or change without changing its reference.
+
+    Constructor of StringBuffer class
+    `````````````````````````````````
+        StringBuffer():allocate memory for 16 character. withreallocation
+        StringBuffer(int n):allocate memory for n character
+        StringBuffer(String):allocate memory for parameterized string and additional space for 16 char
+        length() : return  character stored
+        capacity() : return total number of allocated space for character
+        append() : add content at end of StringBuffer object(concate the string) 
+        insert() : use to add new content at specified index.
+        reverse() : reverse the string.
+========================================================================
+StringBuilder:
+``````````````
+            StringBuilder class is also mutable class that allow to editing in existing content.
+            there is basic difference in StringBuilder and StringBuffer class that:
+                StringBuffer class contain almost method as synchronized so these are thread safe,but slow work.
+                StringBuilder contain all method as non-synchronized so working of StringBuilder methods is faster then StringBuffer methods
+
+            WAP to input a sentence and find count :
+                1.total number of alphabate.
+                2.total number of digits.
+                3.total number of vowel.
+                4.total number of words.
+                
