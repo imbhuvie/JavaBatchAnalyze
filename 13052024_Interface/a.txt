@@ -1,0 +1,56 @@
+Interface:
+
+    Interface is pure abstract class that can not have its 'object', while abstract class also can cannot have object.
+    There is basic difference between abstract class and Interface, that abstract class can have both declare and difinition of the method
+    An Interface can have declaration of method.
+    Note: An Interface is also called pure abstract class.
+    Properties of Interface:
+        1.interface constructor: An interface does not contains constructor neither implicit nor explicit
+        2.interface variable: An interface variable implicitly assign three modifiers:
+                                1.public
+                                2.static
+                                3.final
+        3.interface method: An interface method implicitly assign these modifiers.
+                                1.public 
+                                2.abstract
+    
+Note 1: An interface declared using 'interface' keyword, and it should be completed by a class using 'impliments' keyword
+Note 2. A class that impliments an interface, it must 'override' all the methods of interface otherwise it show compile time exception.
+Note 3. A class that override the methods of interface, then we must use 'public' modifier at the time of override with interface methods,
+        otherwise it show weaker access error.
+
+Multiple Inheritance:
+    Multiple inheritance can be implimented using interface, There are three ways to impliment multiple inheritance:
+    1.  it is allow that we can extends the class and impliments an interface at a time,
+        this is also called implimentation of multiple inheritance using interface
+        
+    2. A class can impliments 2 or more interfaces at a time. this is also called multiple inheritance.
+    Example:
+            interface A{
+
+            }
+            interface B{
+
+            }
+            class C{
+
+            }
+            class D extends C impliments A,B{
+
+            }
+    3. A interface can extend 3 or more interfaces at same time.
+        Example:
+            interface A{
+
+            }
+            interface B{
+
+            }
+            interface C extends A,B{
+
+            }
+            class D extends C{
+                //Here class D must override all the methods of interface C, 
+                //and C extends A,B so also we override all the methods of A,B interface
+                //overall you must override methods of interface C,B,A .
+            }
