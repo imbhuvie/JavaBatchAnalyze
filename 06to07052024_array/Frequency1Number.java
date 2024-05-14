@@ -18,6 +18,7 @@ public class Frequency1Number {
                 count++;
         }
         System.out.println("Frequncy of " + num + " is :" + count);
-
+        sc.close();
+        ;
     }
 }

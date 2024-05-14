@@ -36,8 +36,7 @@ public class FrequencyEachNumber {
         // if (a[i] != 0)
         // System.out.println("Frequency of " + a[i] + " is :" + value);
         // }
-
+        sc.close();
     }
 
 }
-
