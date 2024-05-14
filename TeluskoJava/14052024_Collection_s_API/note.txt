@@ -1,0 +1,32 @@
+I => interface
+C => Class
+
+Collection Framwork:
+    1.Collection  I
+    2.Map
+
+    1.Collection:
+        A.List I
+        B.Set   I
+        C.Queue I
+
+        A.List:
+            1.ArrayList (class)
+            2.LinkedList (class)
+            3.Vector (legacy class) ->Stack (legacy class)
+            
+
+        B.Set:
+            1.HashSet(class) -> LinkedList(class)
+            2.SortedSet(interface) -> NavigableSet(interface) -> TreeSet(class)
+        
+        C.Queue:
+            1.PriorityQueue(class)
+            2.Dequeue (interface) -> ArrayQueue(class)
+    2.Map I:
+        HashMap C-> LinkedHashMap C
+        IdentityHashMap C
+        WeakHashMap C
+        SortedMap I-> NavigableMap I->TreeMap C
+        HashTable C->Properties C
+        Dictionary C
