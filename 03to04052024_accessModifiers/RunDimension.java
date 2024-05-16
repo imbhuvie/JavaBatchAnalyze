@@ -1,5 +1,5 @@
 // WAP to create a class Dimension to input 2 variable a,b amd method getData() and area()
-//     create 2 subClasses Rectangle and Triangle to compute Area of respective shape by overriding the Area() methodclass Dimension{
+// create 2 subClasses Rectangle and Triangle to compute Area of respective shape by overriding the Area() methodclass Dimension{
 
 class Dimension {
     double a, b;

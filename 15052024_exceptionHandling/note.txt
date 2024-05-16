@@ -1,0 +1,104 @@
+Exception Handling:
+```````````````````
+    Exception is an abnormal condition that terminate the execution of program.
+    For example:if we are dividing a number by zero then it terminate the excution of program.
+    An other example if we are trying to access invalid index of array the it also terminate the excution of program.
+
+    There are 2 types of Exception :
+    ````````````````````````````````
+        1.Checked Exception
+        2.Unchecked Exception
+
+        1.Checked Exception:
+        ````````````````````
+            These type Exception can be identified by the compiler, 
+            and generated due to poor understanding of language grammer.
+        2.Unchecked Exception:
+        ``````````````````````
+            These type Exception can not be identified by the compiler, 
+            and generated due to poor understanding of operations and logics.
+
+    Predefine Class Hierarchy for Exception Handling:
+    `````````````````````````````````````````````````
+        java.lang.Throwable
+            2.AssertionError
+            1.Exception
+                a.NumberFormatException
+                b.NullPointerException
+                c.ClassNotSupportedException
+                d.IllegalAccessException
+                e.ArithmeticException
+                f.IndexOutOfBoundException
+                    i.ArrayIndexOutOfBoundsException
+                    ii.StringIndexOutOfBoundsException
+                ``````````````````````````````````````
+                g.java.io.IOException
+                h.java.sql.SQLException
+        
+    These are 5 keyword, which are used to implimentation of Exception Handling:
+        _______
+        1.try : 
+                try block contains the actual programming code that has possibility to occurance of an exception. 
+                A try can have multiple catch block. Nesting of try and catch block is allowed.
+        _________
+        2.catch : 
+                catch block is always written with try block and if we have an appropriate catch block then,
+                it prevent the termination of program.
+        ___________
+        3.finally : 
+                finally block can be written with try or try catch, 
+                and finally block must be executed either exception is generated or not
+        _________
+        4.throw :
+        __________
+        5.throws :
+
+        Syntax 1. try with finally :
+        ````````````````````````````
+            try{
+
+            }
+            finally{
+
+            }
+        Syntax 2. try with catch :
+        ``````````````````````````
+            try{
+
+            }
+            catch(Exception e){
+
+            }
+        Syntax 3. try with multiple catch :
+        ```````````````````````````````````
+            try{
+
+            }
+            catch(ArithmeticException e){
+
+            }
+            catch(Exception e){
+
+            }
+            .
+            .
+            .
+            .
+        Syntax 4. Nested try catch :
+        ````````````````````````````
+            try{
+                try{
+
+                }
+                catch(Exception e){
+
+                }
+            }
+            catch(Exception e){
+
+            }
+        Syntax 5. try without catch and finally :
+        `````````````````````````````````````````
+            try(statement){
+                
+            }

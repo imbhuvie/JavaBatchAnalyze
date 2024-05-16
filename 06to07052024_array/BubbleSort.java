@@ -1,6 +1,6 @@
 import java.util.Scanner;
-
-//USing Bubble sort
+// WAP to print nth largest and smallest element of array.
+//sorting using Bubble sort
 public class BubbleSort {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -31,7 +31,7 @@ public class BubbleSort {
             System.out.print(v + " ");
         }
         System.out.println();
-        // To find nth Largest element.
+        // To find nth Largest element in sorted array print (nth index-1)
         System.out.print("Search for nth largest and Smallest element :");
         int n = sc.nextInt();
         System.out.println(n + "th largest element is :" + (a[size - n]));

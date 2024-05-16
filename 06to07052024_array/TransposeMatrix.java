@@ -14,6 +14,7 @@ public class TransposeMatrix {
         System.out.println("Given Matrix is :");
         outputArray(a, m, n);
         int b[][] = new int[n][m];
+        // Transpose of matrix
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
                 b[j][i] = a[i][j];

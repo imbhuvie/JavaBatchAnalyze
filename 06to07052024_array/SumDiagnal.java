@@ -25,6 +25,7 @@ public class SumDiagnal {
 
     }
 
+    // to print all diagnal elements and its sum
     static int bothDiagnalSum(int[][] a, int x, int y) {
         int sum = 0;
         System.out.print("\nDiagnal Elements are :");
@@ -40,6 +41,7 @@ public class SumDiagnal {
         }
         return sum;
     }
+    // to print right diagnal elements and its sum
 
     static int rightDiagnal(int[][] a, int x, int y) {
         int sum = 0;
@@ -56,6 +58,7 @@ public class SumDiagnal {
         }
         return sum;
     }
+    // to print left diagnal elements and its sum
 
     static int leftDiagnal(int[][] a, int x, int y) {
         int sum = 0;
@@ -73,6 +76,7 @@ public class SumDiagnal {
         return sum;
     }
 
+    // to input array
     static void inputArray(int[][] a, int m, int n) {
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
@@ -81,6 +85,7 @@ public class SumDiagnal {
         }
     }
 
+    // to output array
     static void outputArray(int[][] a, int m, int n) {
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {

@@ -1,4 +1,5 @@
-
+// WAP to demonstrate the concept of static block.
+// all the static block will execute first then by the main() method as usual the program is execute
 public class StaticBlock {
     static int a = 20;
     static {
@@ -7,7 +8,7 @@ public class StaticBlock {
 
     StaticBlock() {
         System.out.println("this is Constructor Block");
-        a=50;
+        a = 50;
     }
 
     static {
@@ -29,7 +30,8 @@ public class StaticBlock {
         System.out.println("Starting main() method");
         new StaticBlock().staticMethod();
     }
-    static{
+
+    static {
         System.out.println("This is static Block 4");
     }
 }

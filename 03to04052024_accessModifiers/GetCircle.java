@@ -1,3 +1,5 @@
+// WAP to find area and circumference of circle using static method and call him without making object 
+
 import java.util.Scanner;
 
 class Circle {

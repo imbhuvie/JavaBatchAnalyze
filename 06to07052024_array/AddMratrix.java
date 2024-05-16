@@ -41,7 +41,7 @@ public class AddMratrix {
             }
             System.out.println();
         }
-
+        // Addition of the matrix
         int c[][] = new int[m][m];
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < m; j++) {

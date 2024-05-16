@@ -1,4 +1,4 @@
-
+//Constructor Overloading
 class Table {
     int n;
 

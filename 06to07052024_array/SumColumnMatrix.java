@@ -1,3 +1,5 @@
+// WAP to input an array and find the sum of column and rows.
+
 import java.util.Scanner;
 
 public class SumColumnMatrix {

@@ -14,10 +14,12 @@ public class SearchElement {
         }
         System.out.print("Enter The Element to find :");
         int num = sc.nextInt();
+        //printing given elements.
         System.out.print("Elements are :");
         for (int n : ar) {
             System.out.print(n + " ");
         }
+        // print only first occurence index of the element
         boolean b = false;
         for (int n : ar) {
             if (num == n)
@@ -57,6 +59,7 @@ class Searching1 {
         }
         System.out.print("Enter The Element to find :");
         int num = sc.nextInt();
+        // print all the index where number will be
         if (isFound(ar, num)) {
             System.out.println(num + " is found at '" + index + "' Position");
         } else {

@@ -1,3 +1,5 @@
+// WAP to and input an array and input a number find the subarray which addition is that number.
+
 public class SumSubArray {
     public static void main(String[] args) {
         int[] a = { 2, 4, 6, 8, 4, 5, 1, 9, 7 };

@@ -1,4 +1,12 @@
+//WAP to create an array of object(of clas Student) and store rollnumber,name,marks and print 
+
 import java.util.Scanner;
+
+class Student {
+    int roll_number;
+    String name;
+    int marks;
+}
 
 public class ArrayOfObjects {
     public static void main(String[] args) {
@@ -23,10 +31,4 @@ public class ArrayOfObjects {
             System.out.printf("Roll Number :" + i.roll_number + "\tName :" + i.name + "\tMarks :" + i.marks);
         }
     }
-}
-
-class Student {
-    int roll_number;
-    String name;
-    int marks;
 }

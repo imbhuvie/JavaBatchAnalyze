@@ -1,3 +1,5 @@
+//Demonstrate StringBuffer
+
 public class StringBufferDemo {
     public static void main(String[] args) {
         StringBuffer name = new StringBuffer("Hello ");// by dwfault it take space 16
@@ -9,6 +11,7 @@ public class StringBufferDemo {
         System.out.print("Name : " + name);
         System.out.print(" :: Capacity :" + name.capacity());
         System.out.println(" :: length : " + name.length());
+        // OTHER CODE
         // byte b = 9;
         // short s = 7;
         // int i = 9;

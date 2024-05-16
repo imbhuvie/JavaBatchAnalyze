@@ -1,3 +1,5 @@
+// WAP to reverse array in same array.
+
 import java.util.Scanner;
 
 public class ReverseArray {

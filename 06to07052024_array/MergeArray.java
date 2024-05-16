@@ -1,3 +1,5 @@
+// WAP to merge to array in same order.
+
 import java.util.Scanner;
 
 public class MergeArray {
@@ -14,6 +16,7 @@ public class MergeArray {
         for (int i = 0; i < 10; i++) {
             b[i] = sc.nextInt();
         }
+
         for (int i = 0; i < 10; i++) {
             c[i] = a[i];
         }
@@ -22,10 +25,8 @@ public class MergeArray {
         }
         for (int k : c)
             System.out.print(k + " ");
-        for (int k : c)
-            System.out.print(k + " ");
 
-        // OR
+        // OR using method
         System.arraycopy(a, 0, c, 0, 10);
         System.arraycopy(b, 0, c, 10, 10);
         for (int k : c)

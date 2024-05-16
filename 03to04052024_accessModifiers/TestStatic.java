@@ -1,4 +1,4 @@
-//Demonstrate static keyword
+//Demonstrate static keyword with variable and methods.
 class Employee{
     String ename;
     int ecode;

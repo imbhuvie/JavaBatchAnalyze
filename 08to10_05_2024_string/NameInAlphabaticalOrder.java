@@ -1,3 +1,5 @@
+//WAP to input an array of names and arrange them in alphabatical order.
+
 import java.util.Scanner;
 
 public class NameInAlphabaticalOrder {
@@ -16,15 +18,14 @@ public class NameInAlphabaticalOrder {
                     s = a[i];
                     a[i] = a[j];
                     a[j] = s;
-
                 }
-
             }
         }
         System.out.println("sorted array :");
         for (int i = 0; i < n; i++) {
             System.out.print(a[i] + " ");
         }
-        // System.out.println("comparint aman to prince :" + ("Ab".compareTo("ac")));
+        // System.out.println("comparint aman to prince :" +
+        // ("Ab".compareTo("ac")));//return positive
     }
 }

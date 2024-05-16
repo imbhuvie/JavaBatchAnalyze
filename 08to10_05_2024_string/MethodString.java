@@ -1,4 +1,4 @@
-
+//Demonstrate the method of Strings.
 public class MethodString {
     public static void main(String[] args) {
         String p = "hello java";
@@ -20,7 +20,6 @@ public class MethodString {
         System.out.println("s1.substring(10) :" + s1.substring(10));
         System.out.println("s1.substring(0, 9) [print(0-8)char] :" + s1.substring(0, 8));
         System.out.println("s1.substring(3, 12) [print(3-11)char] :" + s1.substring(0, 8));
-
         System.out.println("s1.charAt(2) :" + s1.charAt(2));
         System.out.println("s1.indexOf('p') :" + s1.indexOf('p'));
         s1 = "Java";

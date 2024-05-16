@@ -24,6 +24,7 @@ public class FrequencyEachNumber {
                 System.out.println("Frequency of " + a[i] + " is :" + count);
             }
         }
+        // OR second option
 
         // for (int i = 0; i < 10; i++) {
         // int value = 1;
