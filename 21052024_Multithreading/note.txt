@@ -1,0 +1,110 @@
+MULTITHREADING :
+````````````````
+    Multi-Threading is a programming approach that approve the speed of an application.
+    In mutlithreading a larg program can be devided into a number of independent part of program and each independent part of program called thread,
+    now these thread can be execute simulteneously to improve the speed of application.
+    In a program, each independent part of program called thread and execution of more then one thread at a time is called mutlithreading.
+    ________________
+    |               |       ________
+    |   thread1     |------>|       |
+    |   thread2     |------>| C P U |
+    |   thread3     |------>|       |
+    |   thread4     |------>|       |
+    |_______________|       |_______|
+
+
+Thread Properties:
+``````````````````
+    all the characterstics of thread can be classified into 5 types:
+        1.Creation of thread
+        2.thread LifeCycle
+        3.Thread Priority
+        4.Daemon Thread
+        5.Thread Group
+
+
+        There are 2 methods are used to creat a thread :
+        ````````````````````````````````````````````````
+            1.Creating thread by extending java.lang.Thread class
+            2.Creating Thread  by implimenting java.lang.Runnable Interface.
+
+            java.lang.Runnable  (Interface)
+            public void run()
+
+            java.lang.Thread    (Class)
+            Thread()
+            Thread(String)
+            Thread(Runnable)
+            start()
+            yield()
+            suspend()
+            resume()
+            wait()
+            notify()
+            notifyAll()
+            sleep()
+            setName()
+            getName()
+            setPriority()
+            getPriority()
+            setDaemon()
+            isDaemon()
+            MIN_PRIORITY
+            NORM_PRIORITY
+            MAX_PRIORITY
+
+
+            NOTE : To create a thread we must override public void run() method either we are extending Thread class or implimenting Runnable Interface.
+            ````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````
+
+            Thread-LifeCycle OR Thread Status :
+            ```````````````````````````````````
+                thread LifeCycleis is responsible to handle execution machanism of thread 
+                there are 4 possible state in thread LifeCycle.
+                ```````````````````````````````````````````````
+                    1.New Born State
+                    2.Runnable State
+                    3.Blocked State
+                    4.Dead State
+
+    sleep(long) throws InterruptedException:
+    ````````````````````````````````````````
+            This method is used to block a thread for specific time and this time is given in milisecond
+            WAP to print 1 to N natural number series and here make sure difference of one second between printing two elements
+    
+    Thread Priority:
+    ````````````````
+            It is allowed that we can execute a thread on the basis of priority
+            a thread that have maximum priority, mostly complited first but there is no guarantee that a thread of maximum priority always complited first.
+        
+    Predefine Constraints of thread priority:
+    `````````````````````````````````````````
+            Constraints      Priority Value     Priority Level
+            ```````````      ``````````````     ``````````````
+            MIN_PRIORITY           1            Minimum
+            NORM_PRIORITY          5            Normal
+            MAX_PRIORITY           10           Maximum
+
+    setPriority() :
+    ```````````````
+        This mehtod is used to assign new priority of a thread and every thread has default priority,
+        and its value is 5.
+
+    NOTE : Every Thread can have its priority 1 to 10 only if we are trying to assign priority of thread outof 10 then,
+    it should be run time exception named as IllegleArgumentException
+
+    getPriority() :
+    ```````````````
+        It return the priority of a thread.
+
+    setName() :
+    ```````````
+        It is used to assign a name to thread.
+    NOTE : The Name of Thread should be started from Thread-0,Thread-1,Thread-2, ...... etc.
+
+    Printing object of thread :
+    ```````````````````````````
+        Object of thread print 3 information which  are :
+                1.Thread Name
+                2.Thread Priority
+                3.Controlling Thread
