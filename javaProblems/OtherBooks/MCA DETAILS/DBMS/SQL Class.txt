@@ -1,0 +1,466 @@
+ v 
+___________________________________________________________DATABASEMYSQL__________________________________________________________
+                                                           01/09/2021
+Connnect the super user:-
+  
+1. open run SQL command line 
+
+connect system/system;   --->here you connet the super user.
+
+2.how to create new database user ?
+
+Syntex of create command:-
+create user<username> identified by <password>;
+
+E.g.
+create user stdb identified by test;
+
+3.Give permissition  to database user:
+
+Syntex:-
+
+grant<permission> to <username>;
+
+e.g.
+
+grant dba to stdb;
+
+-----> now connect stdb user
+
+connect stdb/test;
+
+use of create commant to create the table:-
+
+Syntex:-
+
+creat table <tablename>
+(
+<columnname><datatype>,
+<columnname><datatype>,
+<columnname><datatype>,
+);
+
+E.g
+
+craete table employee
+(
+empid int,
+empname varchar2(30),
+salarry int
+);
+
+open file
+desc table_name
+______________________________________________________________________________________________________________________________________
+                                                                       02/09/2021
+
+Drop :-The drop command is used to delete database object.
+
+Syntex:-drop table<tablename>;
+
+E.g:-
+drop table employee;
+
+PRIMARY KEY:-Primary key is a field in a table which is used to identifiy each record uniquely. it is atomic and not null.
+
+now  we create table with name "empinfo"having empid,empname,department,salary columns. in this table we create empid as Primary key.
+
+create table empinfo
+(
+empid varchar2(10) primary key,
+empname varchar2(30),
+department varchar2(20),
+salary number(8)
+);
+
+Use of the Inset command  to insert record in to the table:-
+
+Syntax:-
+insert into <tablename> values(<value1><alue2>,<value3>);
+
+E.g
+
+1.insert into empinfo values('SPI1001','Uchit kumar','Development',25000);
+2.insert into empinfo values('SPI1002','Satyam panday','management',50000);
+3.insert into empinfo values('SPI1003','manjeet patel','HR',55000);
+
+commit; command is save the record into the database object
+
+select command:-select command is use to select data (view data) from database object.
+select all culomns from table:-
+select *from <tablename>;
+E.g:-
+
+select * from empinfo;
+
+select specific columns fromtable:-
+
+select <columnname>,<columnname> from <tablename>;
+
+E.g.:-
+
+select empid,empname,salary from empinfo;
+
+homework:-
+
+create table custinfo
+(
+custid number(5) primary key,
+custname varchar2(20),
+custaddress varchar2(30),
+custconnectdate varchar2(20),
+contectno varchar2(15)
+);
+
+insert into custinfo values ('101','Rajeev Singh','lucknow','12-dec-2012',8933840736);
+
+insert into custinfo values ('102','Jitendra verma','Kanpur','01-jan-2013',9838505980);
+insert into custinfo values ('103','Ravi Singh','barabanki','15-jan-2013',99936652039);
+
+insert into custinfo values ('104','Priya Verma','Lucknow','15-jan-2013',9936390301);
+
+insert into custinfo values ('105','Brajesh Mishra','barabanki','17-feb-2013',8738970899);
+
+insert into custinfo values ('106','Amit Kumar','Lucknow','18-mar-2013',0548-2202798);
+
+______________________________________________________________________________________________________________________________________
+                                                                  -:database seasion:-
+                                                                  -:03-09-2021:-
+
+where clause:-Where clause is use to specifiy the condition with sql statment.
+
+Syntax:-
+select * from <tablename> where <condition>;
+
+E.g.:-
+
+select * from empinfo where empid='SPI1001';
+
+from view the database:-
+
+-sow the table
+
+-select * from tab;
+
+Ex1.:- select empid,empname,salary columns for empid SPI1001.
+
+select empid,empname,salary from empinfo where empid='SPI1001';
+
+
+ Use of insert command to insert values in spesific columns:-
+Syntax:-
+insert into <tablename>(<columnname1>,<columnname2>,<columnname3>)values(<value1>,<value2>,<value3>);
+
+E.g:-
+
+insert into empinfo  (empid,empname,department) values('SPI1004','Vishal kumar','Development');
+
+Use of delete command:-
+
+Syntax :-
+delete from <tablename> where <condition>;   
+
+E.g.:-
+
+delete from empinfo where empid='SPI1001';
+
+Use of  update command :-
+Syntax of update command:-
+
+update <teblename> set <columnname1>=<value1>,<columnname2>=<value2> where<contion>;
+
+E.G.
+
+update empinfo set salary=35000 where empid='SPI1004';
+
+Use of truncate command :-
+Syntax:-
+
+truncate table <tablename>;  
+E.G:-
+
+truncate table empinfo;
+
+use of drop command:-
+
+Syntax:-
+
+drop table <tablename>; 
+
+E.g.:-
+drop table empinfo;
+Exercise on alter command
+Use of alter command:-
+
+
+create table login
+(
+userid varchar2(20) primary key,
+password varchar2(10)
+);
+
+
+Use of alter command to add a new column in table:-
+Syntax:-
+alter table <tableame> add <columnname><datatype>;
+
+E.g.:-
+
+alter table login add usertype varchar2(20);
+
+
+Use of alter command to drop a column:-
+
+Syntax:-
+alter table <tablename> drop column <columnname>;
+
+E.g.:-
+
+alter table login drop column usertype;
+
+
+
+use of alert command to rename a column:-
+
+Syntax:-
+
+alter table <tablename>rename column <oldname> to <newname>;
+																																																																					
+E.g.:-
+
+alter table login rename column password to passwd;
+______________________________________________________________________________________________________________________________________
+
+                                                       -:Database seasion date:-
+                                                       -:04/09/2021:-
+
+Join Operation :- if you want to select data from two tables, then you can perform join opereation.for join operation atleast one column must be common in both tables.
+
+Foreign key:- Foreign key is a field in a table which work as primary key in another table .foreign key is use to establish relationship between two table.
+
+
+create table employee
+(
+empid number(5) primary key,
+empname varchar2(30)
+); 
+
+create table product
+(
+pid number(5) primary key,
+pname varchar2(20),
+empid number(5),
+foreign key(empid) references employee(empid)
+);
+
+
+insert into employee values(1001,'john');
+insert into employee values(1002,'brown');
+insert into employee values(1003,'green');
+insert into employee values(1004,'Lily');
+
+insert into product values(101,'printer',1001);
+insert into product values(102,'Scanner',1002);
+insert into product values(103,'Ploter',1002);
+insert into product values(104,'Laptop',1003);
+insert into product(pid,pname) values(105,'Projector');
+--------------------------------------------------------------
+Query  to perform  join oparetion :-
+
+here we have two tables 'employee' and 'product'. now by esing join oparetion we select empname field from employee  table and pname field from product table on the basic of empid.empid field work as primary key in employee table and as foreign key in product table.
+
+--------------------------------------------------------------------------------------------------------------------------------------
+select empname,pname from employee,product where employee.empid=product.empid;
+
+
+LEFT JOIN OPARETION :-
+
+WHEN YOU PERFORM LEFT JOIN OPARETION ,then all values of left are display and matching values of right table are displayed
+
+
+select empname,pname from employee left join product on employee.empid=product.empid;
+
+--------------------------------------------------------------------------------------------------------------------------------------
+Right join oparetion :-
+
+when you perform right join oparetion ,then all values of right table are displayed and matchinh values of left table are displayed.
+
+select empname,pname from employee right join product on employee.empid=product.empid;
+____________________________________________________________________________________________________________________________
+                                                               -:database session date :-                                                
+                                                                     -:06/09/2021:-
+
+
+
+Ex1:- create table with name 'spiemp'having fields empid,empname,department,salary.and insert atleast 5 record into table.
+
+create table spiemp
+(
+empid varchar2(10) primary key,
+empname varchar2(30),
+department varchar2(20),
+salary number(10)
+);
+
+insert  record into spiemp table:-
+
+insert into spiemp values ('SPI1001','Ravi Singh','Development',40000);
+insert into spiemp values('SPI1002','Priya Singh','HR',45000);
+insert into spiemp values ('SPI1003','Rajat Singh','management',80000);
+insert into spiemp values ('SPI1004','Brajesh Mishra','Development',45000);
+---------------------------------------------------------------------------------------------
+we want to display the rcord assenind order and dessending order
+
+use of order by:-  order by is use to arrenge the reecord in ascending order or discending order .
+
+
+select * from spiemp order by empname;
+----------------------------------------------------
+for dicending order :- 
+
+select*from spiemp order by empname desc;
+-----------------------------------------------------------------------
+use of like oparetor:-  the 'like' oparetor is use for pettent matching.
+
+EX.1:--Write a sql statment to select those record whose last name is singh .
+
+select * from spiemp where empname like '%Singh';
+---------------------------------------------------------
+Ex.2:- write a sql statment to select those record whose name is started with 'R'.
+
+select*from spiemp where empname like 'R%';
+
+_____________________________________________________________________________________________________________________________________________________
+
+SQL Function :-
+
+1. count():- count() function is use to count number of rows in a table.
+
+Ex.1 
+select count(*) from spiemp;
+
+select count(*) "No.of rows" from spiemp;
+
+-----------------------------------------------------
+
+2.sum():-sum() function is use to find sum of values of a column.
+
+Ex.1
+
+select sum(salary) "total salary" from spiemp;
+---------------------------------------------------------------------------------
+3. max():- max() function is used to find maximum valuve of a column .
+
+Ex1.:-
+
+select max(salary) "Maximum salary" from spiemp;
+
+------------------------------------------------------------------
+4. min():- min() function is used to find minimum values of a column.
+
+Ex.
+
+select min(salary) "Minimum salary" from spiemp;
+------------------------------------------------------------------------
+5. avg():- avg() functin is used to find a average values of a column.
+Ex.
+
+select avg(salary) "Average of salay" from spiemp;
+-----------------------------------------------------------------
+6.upper():- upper() function is used to convert text into upper case(capital latters).
+
+Ex.
+
+select upper(empname) "Employee name" from spiemp;
+---------------------------------------------------------------------
+7. lower():- lower() function is used to convert text into lower case (small latters).
+
+Ex.
+
+select lower(empname) "Employee Name" from spiemp;
+--------------------------------------------------------------------------
+_______________________________________________________________________________________________________________________________________________
+
+Nested Query:- if you use a query inside another query, it is callesd nested query.
+
+Ex:- write a sql statment to display the record with maximum salary.
+
+select * from spiemp where salary=(select max(salary) from spiemp);
+
+
+____________________________________________________________________________________________________________________________________________________
+                                                         -:database session:-
+                                                            -:07/09/2021:-
+----------------------------------------------------------------------------------------------------------------------
+create table tbl_employee
+(
+empid number(5) primary key,
+empname varchar2(30),
+department varchar2(20),
+salary number(8)
+);
+---------------------------------------------------------------------------------------  
+View:-  View is know as a logical table.
+
+create view emp as select empid,empname,department from tbl_employee;
+
+Now insert record into view:-
+
+insert into emp values(1001,'Brajesh mishra','development');
+insert into emp values(1002,'Ravi Singh','Managment');
+
+_________________________________________________________________________________-
+create table customer
+(
+id number (5),
+name varchar2(30),
+city varchar2(30)
+);
+--------------------------------------------------
+alter table customer add address varchar2(30);
+
+rename customer to customer_old;
+----------------------------
+How to create table from existing table:-
+
+Ex.:-create table customer as select id as ad, name as name, address as address,city as city from customer_old;
+
+alter table customer modify add number(5) primary key;
+_____________________________________________________________________________________________________________________________________
+
+check contraint:- check constraint is use for validation in table.
+
+Table name:- empinfo
+ 
+empid-> Must start with 'SPI'.
+empname->Must be in'upper' case.
+country-> Either 'india' are Nepal..
+salary-> not then more 100000.
+
+
+create table empinfo
+(
+empid varchar2(10) check(empid like 'SPI%'),
+empname varchar2(30)check(empname=upper(empname)),
+country varchar2(5) check(country in('India','Nepal')),
+salary number(6) check (salary<=100000),
+primary key(empid)
+);
+
+INSERT INTO TABLE EMPINFO:-
+
+insert into empinfo values('SPI1001', 'BRAJESH','India',50000);
+insert into empinfo values('SPI1002', 'CHAI CHI','Nepal',70000);
+insert into empinfo values('SPI1003', 'VISHAL','India',60000);
+insert into empinfo values('SPI1004', 'UCHIT','India',100000);
+
+
+                                                                                                                         UCHIT KUMAR
+_______________________________________________________________________________________________________________________________________________________________________
+ <select>such type of select tag is used in dynomic binding.
+
+
+
+
+
+

@@ -1,0 +1,129 @@
+			** DDL Commands**
+
+
+//Create Command for creating database
+
+Syntax-  create database <database name>
+
+ Ex-   create database mydb
+----------------------------------------------------------
+// Create command for creating table
+
+Syntax- create table <tablename>(field datatype(size),field2 datatype(size),...)
+
+Ex-  create table tbl_stinfo(name varchar(60),mobile int(10))
+
+------------------------------------------------------------
+Alter Command -- it is use for alter in fields
+	Add
+	drop
+	modify/change
+-----------------------------------------------
+// Alter for adding column
+
+Syntax- alter table <tableName> add <columnName> datatype(size)
+
+Ex-  Alter table tbl_stinfo ADD father_name varchar(60)
+--------------------------------------------------
+// Alter for modification in table
+
+Syntax - alter table <tableName> modify <field> <field details>
+
+ex-    alter table tbl_stinfo modify mobile int(13)
+
+------------------------------------------------------
+// Alter for remove field in table
+
+Syntax-  Alter table <TableName> drop column <columnName>
+
+Ex- 	alter table tbl_stinfo drop column father_name
+
+-------------------------------------------------------
+
+Drop Command--  Is use for delete table and its structure
+// drop for delete table
+
+Syntax-  drop table <tableName>
+
+Ex- 	drop table tbl_stinfo
+
+------------------------------------------------------------
+// drop for delete databse
+
+ ex- drop DATABASE mydb
+
+
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+			** DML  Data Manipulation Language **  (CRUD)
+Insert -- data insert   
+Select --  data retrieve/ Read
+Update--  data updatation
+Dalete -- data deletion
+
+----------------------------------------------------------------
+// Insert for inserting data in table
+
+Syntax- insert into <tableName>(filed name,field2 name,.....) values('value','value2',....)
+
+Ex-  insert into tbl_empinfo(id,name,mobile,address) values(123,'Manish',7080102006,'spi jankipuram sector J Lucknow')
+-----------------------------------------------------------------------
+//Insert data into table without using fileds name
+
+----- insert into tbl_empinfo values(1236,'sector j',7080102008,'SPI') 
+
+------ insert into tbl_empinfo(id,address,mobile,name) values(123,'spi jankipuram sector J Lucknow',7080102006,'Manish')
+
+----------------------------------------------------------------------------
+// select for read data from tbl
+
+Synatx- select <FieldName> , <FieldName2>,..   from <tablaName> 
+
+	Ex-  select * from tbl_empinfo
+
+--------------------------------------------------------------------------
+//  Select Count from Table
+Select count(*) from tbl_empinfo
+
+-----------------------------------------------------------------------
+
+//where condition in Select query
+
+Syntax-  select * from tbl_empinfo where mobile='7080102006'
+
+-------------------------------------------------------------------
+
+Exp- select * from tbl_empinfo where name='SPI'
+
+-----------------------------------------------------------------
+
+Update Query -- Use for update records
+
+syntax-  update tbl_empinfo set salary=5000 where mobile='2147483647'
+Exp2- update tbl_empinfo set salary=10000 where name='manish'
+
+-----------------------------------------------------------------
+
+Exp - update tbl_student set fee=10000 where name='Ravi'
+
+Exp-  update tbl_student set fee=7000 where st_id=2
+
+----------------------------------------------------------
+fee>7000 ----
+			select * from tbl_student where fee>7000
+
+------------------------------------------------------------
+
+ 2 records update  ---
+
+	Ex- update tbl_student set  name='Ravee',fname='Ram' where st_id=2
+
+
+---------------------------------------------------------------------------------
+
+
+
+TRUNCKET commond

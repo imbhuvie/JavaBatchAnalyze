@@ -1,0 +1,60 @@
+27/05/2024: Video Link : https://www.youtube.com/watch?v=6Geg3kzTaR4
+```````````
+1.	Spring Core Modules::Foundation of the Spring Framework:
+````````````````````````````````````````````````````````
+	01.Spring Introduction
+	02.Adv & dis
+	03.POJO and Java bean class
+	04.Spring Container(IoC Container)
+	05.BeanFactory and ApplicationContext
+	06.Spring First Program Deep Explanation
+	07.Use of Spring Configuration File
+	08.XML and JAVA and Annotations Configuration Files
+	09.Java Beans and its Life Cycle
+	10.Dependency Injection(Setter Method and Constructor DI)
+	11.Autowiring (Using Annotations and XML)
+	
+2.	MAVEN(Build Too):
+`````````````````
+	01.Maven Introduction
+	02.Purpose and benefits of using MAVEN
+	03.POM File(Project Object File)
+	04.MAVEN project in Eclipse/NetBeans
+
+
+3.	Spring Boot Basics:
+```````````````````
+	01.Spring Boot Introduction
+	02.Install STS tool in Eclipse
+	03.Download and install STS IDE
+	04.Creating spring boot applications(Web and Desktop)
+	05.Spring boot initializer
+	06.Spring Boot CLI(Command Line Interface)
+	07.Spring Boot Logging with Log4j
+	
+4.	Spring Boot Data Access Using Databases:
+````````````````````````````````````````
+	01.Introduction to JDBC and Programs(CRUD Operation)
+	02.Spring boot with JDBC
+	03.DAO(Data Access Object) Design Pattern
+	04.ORM(Object Relational Mapping) & Data Persistency
+	05.Introduction to Hibernate and Programs (CRUD Operation)
+	06.Spring Boot with Hibernate
+	07.Introduction to JPA(Java Persistence API) and Programs (CRUD Operation)
+	08.JPQL(Java Persistence Query Language)
+	09.Spring Boot with JPA
+	10.Spring Boot with DataJPA
+
+5.	Spring Boot WEB-MVC:
+````````````````````````
+
+
+6.	Spring Boot with RESTful Webservices and API Integration:
+`````````````````````````````````````````````````````````````
+
+
+7.	Advanced Spring Boot:
+`````````````````````````
+	01.Spring Boot Security Introduction
+	02.Spring Boot Security
+	03.
