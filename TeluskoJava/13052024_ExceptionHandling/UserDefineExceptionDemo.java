@@ -16,7 +16,7 @@ public class UserDefineExceptionDemo {
         try {
             a /= b;
             if (a == 0)
-                throw new UserDefineException("he value of a become zero");
+                throw new UserDefineException("the value of a is zero");
 
         } catch (UserDefineException e) {
             a = 1;
